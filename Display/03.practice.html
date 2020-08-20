@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        background-color: red;
+      }
+
+      #parent span {
+        background-color: purple;
+      }
+
+      #child span {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      display: block; --> display: inline; 혹은 <br />
+      display: inline; --> display: block; 으로 변경하고 싶은 경우에는 어떻게
+      해야할까?
+    </h2>
+
+    <div id="parent">
+      <span>span</span>
+      <div id="child">
+        <span>span</span>
+      </div>
+    </div>
+    <span>span</span>
+  </body>
+</html>

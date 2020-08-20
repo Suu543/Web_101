@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+
+      #first {
+        background-color: red;
+      }
+
+      #second {
+        background-color: blue;
+      }
+
+      #third {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>
+      display: block; 인 요소를 마치 display: inline; 요소 처럼 배치하되
+      display: block; 처럼 가로와 세로의 길이를 정의하고 싶은 경우에는 어떻게
+      해야할까?
+    </h3>
+    <h2>정답</h2>
+    <p>
+      display: inline; 속성을 이용하면 이 문제를 해결할 수 있다. display:
+      inline; 의 한 줄로 나열하는 속성과 display: block;의 가로와 세로 길이를
+      조정할 수 있게 해주는 CSS이다. 마지막으로 한 줄로 나열된 box 사이에 공백이
+      발생한 것을 확인할 수 있다. 이 공백은 font-size라는 CSS 속성과 관련이있다.
+      display: inline; 속성은 본래 content의 길이만을 표시하기 때문에 font를
+      위해 만들어진 요소이다. 그러므로 글꼴을 위와 같이 그냥 나열에 사용하는
+      경우에도 자동으로 공백이 설정된다.
+      <br />
+      예를 들면, b, a, span 태그와 같은 display: inline; 요소의 경우 서로 붙여
+      사용하는 경우 < ><span></span>과 같이 가독성을 위해 기본값으로 공백을
+      부여하는데 이 공백이 4px이다. 그러므로 위 결과에서 한 줄로 나열된 태그
+      사이에 약 4px의 공백이 기본값으로 가독성을 보장하기 위해 제공된다. 이
+      기본값을 변경하고 싶은 경우 옆 블로그 링크를 참고하면 된다.
+      <a href="https://norux.me/63">링크</a>
+    </p>
+    <div class="box" id="first"></div>
+    <div class="box" id="second"></div>
+    <div class="box" id="third"></div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        background-color: red;
+      }
+
+      #child {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      display: block; 인 요소 내부에 display: inline; 혹은 display: block;
+      요소가 존재할 때 자식 혹은 내부 요소의 크기가 변경되면 부모 요소의 크기도
+      변경될까?
+    </h2>
+    <div id="parent">
+      <div id="child">자식</div>
+    </div>
+  </body>
+</html>
