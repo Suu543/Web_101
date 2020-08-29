@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+      }
+
+      #absolute {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+
+      #parent {
+        background-color: skyblue;
+      }
+
+      #child {
+      }
+
+      #second_parent {
+        background-color: green;
+      }
+
+      #new_child {
+      }
+
+      #third_parent {
+        background-color: red;
+      }
+
+      #brand_new_child {
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="absolute">absolute</div>
+    </div>
+    <div class="box" id="parent">
+      <div id="child">children</div>
+    </div>
+
+    <div class="box" id="second_parent">
+      <div id="new_child">new children</div>
+    </div>
+
+    <div class="box" id="third_parent">
+      <div id="brand_new_child">brand new children</div>
+    </div>
+  </body>
+</html>

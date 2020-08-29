@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 부모 div의 position이 static 이기 때문에 무시하고 body를 기준으로 움직인다 */
+      #absolute {
+        background-color: yellow;
+        position: absolute;
+        right: 0;
+      }
+
+      #parent {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+
+      /* 부모 div의 position이 relative 이기 때문에 부모 div를 기준으로 움직인다.  */
+      #child {
+        position: absolute;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="absolute">Absolute</div>
+    </div>
+    <div id="parent">
+      <div id="child">Children</div>
+    </div>
+  </body>
+</html>
