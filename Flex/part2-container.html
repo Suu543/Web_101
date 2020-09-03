@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>part2-container</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 62.5%;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .box1 {
+        background-color: red;
+      }
+
+      .box2 {
+        background-color: blue;
+      }
+
+      .box3 {
+        background-color: purple;
+      }
+
+      .box4 {
+        background-color: brown;
+      }
+
+      .box5 {
+        background-color: salmon;
+      }
+
+      .box6 {
+        background-color: seagreen;
+      }
+
+      .flex-container {
+        display: flex;
+        margin-bottom: 10rem;
+      }
+
+      .flex-inline-container {
+        display: inline-flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+    </div>
+    <div class="flex-container">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+    </div>
+
+    <div class="flex-inline-container">
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+      <div class="box box6"></div>
+    </div>
+
+    <div class="flex-inline-container">
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+      <div class="box box6"></div>
+    </div>
+  </body>
+</html>

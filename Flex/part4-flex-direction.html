@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-Direction</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 62.5%;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+      }
+
+      .box1 {
+        background-color: red;
+      }
+
+      .box2 {
+        background-color: blue;
+      }
+
+      .box3 {
+        background-color: purple;
+      }
+
+      .box4 {
+        background-color: brown;
+      }
+
+      .box5 {
+        background-color: royalblue;
+      }
+
+      .box6 {
+        background-color: sienna;
+      }
+
+      .flex-direction-row {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 10rem;
+      }
+
+      .flex-direction-column {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-direction-row">
+      <div class="box box1">A</div>
+      <div class="box box2">B</div>
+      <div class="box box3">C</div>
+    </div>
+
+    <div class="flex-direction-column">
+      <div class="box box4">A</div>
+      <div class="box box5">B</div>
+      <div class="box box6">C</div>
+    </div>
+  </body>
+</html>

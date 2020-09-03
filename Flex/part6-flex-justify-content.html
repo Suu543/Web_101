@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flex-Direction</title>
     <style>
       * {
         box-sizing: border-box;
@@ -12,48 +12,36 @@
         font-size: 62.5%;
       }
 
-      .container {
-        display: flex;
-        width: 1000px;
-        height: 500px;
-        border: 2px solid black;
-      }
-
       .box {
         width: 100px;
         height: 100px;
-        margin-right: 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
       }
 
       .box1 {
         background-color: red;
-        order: 2;
       }
 
       .box2 {
         background-color: blue;
-        order: 0;
       }
 
       .box3 {
-        background-color: orange;
-        text-align: center;
-        order: -1;
+        background-color: purple;
       }
 
-      .box4 {
-        background-color: tomato;
-        order: 1;
+      .flex-direction-row {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10rem;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="flex-direction-row">
       <div class="box box1">A</div>
       <div class="box box2">B</div>
       <div class="box box3">C</div>
-      <div class="box box4">D</div>
     </div>
   </body>
 </html>

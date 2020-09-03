@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Part-One</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        margin-left: 50px;
+      }
+
+      .box:first-child {
+        background-color: red;
+      }
+
+      .box:nth-child(2) {
+        background-color: blue;
+      }
+
+      .box:nth-child(3) {
+        background-color: purple;
+      }
+
+      .flex-container {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
