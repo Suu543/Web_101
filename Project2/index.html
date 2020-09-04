@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project #2</title>
+    <style>
+      :root {
+        --color-white: #f3f3f3;
+        --color-darkblue: #1b1b32;
+        --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+        --color-green: #37af65;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-size: 62.5%;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: var(--color-darkblue);
+        background-image: linear-gradient(
+            115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)
+          ),
+          url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .container {
+        width: 100%;
+        color: var(--color-white);
+      }
+
+      .header {
+        width: 70%;
+        margin: 4rem auto;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .header p {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: lighter;
+      }
+
+      .survey-form {
+        width: 65%;
+        display: flex;
+        margin: auto;
+        padding: 3rem;
+        flex-direction: column;
+        background: var(--color-darkblue);
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      .form-group label,
+      .form-group input {
+        display: block;
+      }
+
+      .form-group label {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-group p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-group input,
+      .form-group select {
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      .form-group .input-radio {
+        transform: scale(1.5);
+      }
+
+      .form-group .radio-group {
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .form-group .radio-group input {
+        margin-top: 0.7rem;
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        width: 100%;
+        padding: 0.625rem;
+        resize: vertical;
+      }
+
+      .form-group button {
+        background: var(--color-green);
+        color: white;
+        padding: 1.5rem;
+        border: none;
+        border-radius: 10px;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Web Development Survey Form</h1>
+        <p>Thank you for taking the time to help us improve the platform</p>
+      </div>
+      <form class="survey-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="age">Age (Optional)</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="10"
+            max="99"
+            placeholder="Age"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <div class="radio-group">
+            <input
+              name="user-recommend"
+              value="definitely"
+              id="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            <label class="radio-label" for="definitely"> Definitely</label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="user-recommend"
+              value="maybe"
+              id="maybe"
+              type="radio"
+              class="input-radio"
+            />
+            <label class="radio-label" for="maybe">Maybe</label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="user-recommend"
+              value="not-sure"
+              id="not-sure"
+              type="radio"
+              class="input-radio"
+            />
+            <label class="radio-label" for="not-sure">Not sure</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p>What is your favorite feature of Web Development?</p>
+          <select name="mostLike">
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="front-end-projects"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="front-end-projects">Front-end Projects</label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Back-end Projects"
+              value="Back-end Projects"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Back-end Projects">Back-end Projects </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Data Visualization"
+              value="Data Visualization"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Data Visualization">Data Visualization </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Challenges"
+              value="Challenges"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Challenges">Challenges </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Open Source Community"
+              value="Open Source Community"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Open Source Community">Open Source Community </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Gitter help rooms"
+              value="Gitter help rooms"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Gitter help rooms">Gitter help rooms </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Videos"
+              value="Videos"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Videos">Videos </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="City Meetups"
+              value="City Meetups"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="City Meetups">City Meetups </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="wiki"
+              value="wiki"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="wiki">Wiki</label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Forum"
+              value="Forum"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Forum">Forum</label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              name="prefer"
+              id="Additional Courses"
+              value="Additional Courses"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="Additional Courses">Additional Courses</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+            rows="4"
+            cols="100"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
