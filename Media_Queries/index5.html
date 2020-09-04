@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Text</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-size: 62.5%;
+      }
+
+      div {
+        min-height: 50vh;
+        font-size: 3.6rem;
+        /* font-size: calc(1.4rem + 2vw) */
+      }
+
+      div h2 {
+      }
+
+      @media (min-width: 500px) and (max-width: 1024px) {
+        body {
+          background-color: lightskyblue;
+        }
+
+        div {
+          font-size: calc(1.4rem + 1vw);
+        }
+
+        h2 {
+          /* px을 사용하면 dynamic 하게 사이즈 조정이 안되지만 아래와 같이 rem을 사용하면 dynamic 하게 크기 변환이 가능하다 HTML font-size에 따라 */
+          font-size: 24px;
+          font-size: 2rem;
+        }
+
+        html {
+          font-size: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>This is the title!</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        sequi saepe cumque sapiente, deserunt possimus? Dolorem est rerum omnis,
+        expedita dolor incidunt aperiam possimus accusamus earum obcaecati ipsa
+        corrupti cumque?
+      </p>
+      <h1>Hello</h1>
+    </div>
+  </body>
+</html>

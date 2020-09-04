@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VH and VW</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-size: 62.5%;
+      }
+
+      div {
+        background-color: cadetblue;
+        /* content 길이 만큼만 */
+        /* height: 100%; */
+        /* 창을 늘리고 줄여보자 */
+        /* height: 100vh; */
+        width: 50%;
+        min-height: 50vh;
+        font-size: 2.5rem;
+      }
+
+      div h2 {
+        /* 부모 크기에 relative 하지 않다. 다시 말해서 부모 크기에 의존하지 않는다. */
+        height: 50vh;
+        background-color: lightskyblue;
+        /* 부모에 상대적인 크기 */
+        /* width: 50%; */
+        
+        /* 부모에 의존하지 않는 크기 */
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>This is the title!</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        sequi saepe cumque sapiente, deserunt possimus? Dolorem est rerum omnis,
+        expedita dolor incidunt aperiam possimus accusamus earum obcaecati ipsa
+        corrupti cumque?
+      </p>
+      <h1>Hello</h1>
+    </div>
+  </body>
+</html>
