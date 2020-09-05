@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-size: 62.5%;
+      }
+
+      .container {
+        width: 100%;
+        margin: auto;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        width: 100%;
+        min-height: 5vh;
+        background: skyblue;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      .navbar li {
+        list-style: none;
+        cursor: pointer;
+      }
+
+      .main {
+        margin-top: 2rem;
+      }
+
+      .main h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .main p {
+        width: 90%;
+        margin: 2rem auto;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      @media (max-with: 1000px) {
+        .main h1 {
+          font-size: 2.5rem;
+        }
+
+        .main p {
+          font-size: 1.7rem;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .main h1 {
+          font-size: 2rem;
+        }
+
+        .main p {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .navbar {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          justify-content: space-around;
+          padding: 1rem;
+        }
+
+        .main h1 {
+          font-size: 1.5rem;
+        }
+
+        .main p {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="navbar">
+          <li>Home</li>
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="main">
+        <h1>Responsive Navigation Bar</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          beatae officiis, commodi voluptate assumenda illo rem dolorem minus
+          minima natus sint labore doloremque hic aperiam. Modi voluptate
+          veritatis commodi quisquam. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Eaque, repudiandae nam. Cupiditate maiores, beatae
+          repellat, ipsam quod excepturi, ut at quidem tempore itaque harum
+          expedita porro quis nobis quo voluptatem?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
