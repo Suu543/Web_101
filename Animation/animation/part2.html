@@ -11,6 +11,7 @@
         background-color: red;
         /* 다수의 animation을 적용할 수 있다 */
         animation-name: move, fadeOut, changeColor;
+        /* animation-name: combination; */
         animation-duration: 5s;
         animation-iteration-count: infinite;
       }
@@ -39,6 +40,20 @@
           background-color: red;
         }
         to {
+          background-color: blue;
+        }
+      }
+
+      @keyframes combination {
+        from {
+          left: 0;
+          opacity: 1;
+          background-color: red;
+        }
+
+        to {
+          left: 300px;
+          opacity: 0;
           background-color: blue;
         }
       }

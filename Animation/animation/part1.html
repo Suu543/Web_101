@@ -10,11 +10,11 @@
         height: 100px;
         background-color: red;
         animation-name: move;
-        animation-duration: 5s;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
       }
 
-      @keyframes move {
+      /* @keyframes move {
         from {
           left: 0;
         }
@@ -22,19 +22,30 @@
         to {
           left: 300px;
         }
-      }
+      } */
 
-      /* @keyframes move {
+      @keyframes move {
         0% {
           left: 0;
         }
-        50% {
-          left: 100px;
+
+        25% {
+          background-color: orange;
         }
+
+        50% {
+          background-color: yellow;
+        }
+
+        75% {
+          background-color: green;
+        }
+
         100% {
           left: 300px;
+          background-color: blue;
         }
-      } */
+      }
     </style>
   </head>
   <body>
