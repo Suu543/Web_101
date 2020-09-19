@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        /* animation-fill-mode: backwards; */
+        animation-fill-mode: both;
+      }
+
+      @keyframes example {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+          background-color: blue;
+        }
+      }
+
+      /* @keyframes example {
+        from {
+          top: 50px;
+        }
+
+        to {
+          top: 200px;
+          background-color: blue;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>
+      animation 이름은 맘대로, position, animation-fill-mode를 이용해 변화된
+      위치에 그대로 머무르게 만들기
+    </h1>
+  </body>
+</html>

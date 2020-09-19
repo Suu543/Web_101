@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        position: relative;
+        font-weight: bold;
+        animation-name: timingMove;
+      }
+
+      #div1 {
+        animation-timing-function: linear;
+      }
+      #div2 {
+        animation-timing-function: ease;
+      }
+      #div3 {
+        animation-timing-function: ease-in;
+      }
+      #div4 {
+        animation-timing-function: ease-out;
+      }
+      #div5 {
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes timingMove {
+        from {
+          left: 0px;
+        }
+
+        to {
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      마지막에는 동시에 도착하지만 animation-timing-function을 사용해 모두
+      다르게 속도가 증가하도록 정의
+    </h1>
+    <div class="box" id="div1">linear</div>
+    <div class="box" id="div2">ease</div>
+    <div class="box" id="div3">ease-in</div>
+    <div class="box" id="div4">ease-out</div>
+    <div class="box" id="div5">ease-in-out</div>
+  </body>
+</html>

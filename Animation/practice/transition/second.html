@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition-property: width, height;
+        transition-duration: 2s, 4s;
+      }
+
+      .box:hover {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Transition Property</h1>
+    <h2>가로 100px --> 300px 2초, 세로 100px --> 300px 4초</h2>
+    <h2>transition-duration + transition-property 사용하기</h2>
+
+    <div class="box"></div>
+  </body>
+</html>

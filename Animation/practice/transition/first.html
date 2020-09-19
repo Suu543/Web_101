@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* transition-property: width;
+        transition-duration: 2s; */
+        transition: width 2s;
+      }
+
+      .box:hover {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>2초 동안 가로길이 100px --> 200px로 증가</h1>
+    <h2>transition-duration + transition-property 사용하기</h2>
+    <div class="box"></div>
+  </body>
+</html>

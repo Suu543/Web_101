@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: changeColor;
+        animation-duration: 4s;
+      }
+
+      @keyframes changeColor {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>animation 이름은 changeColor + 색은 빨강 --> 파랑, 시간은 4초</h1>
+    <div class="box"></div>
+  </body>
+</html>
