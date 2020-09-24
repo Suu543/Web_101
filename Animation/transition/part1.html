@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       /* property에 기준을 둔다 */
-      div {
+      .box {
         width: 100px;
         height: 100px;
         background-color: red;
-        transition: all 2s;
+        opacity: 0.5;
+        /* transition-property: background-color, opacity;
+        transition-duration: 3s, 5s; */
+        /* transition: all 2s; */
       }
 
-      div:hover {
+      .box:hover {
+        opacity: 1;
         background-color: blue;
+        transition: all 2s;
       }
     </style>
   </head>
   <body>
-    <div></div>
+    <div class="box"></div>
   </body>
 </html>

@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      div {
+      .box {
         width: 100px;
         height: 100px;
         background-color: red;
         position: relative;
-        animation: myAnimation 5s infinite;
+        animation-name: myAnimation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        /* animation: myAnimation 5s infinite; */
         /*홀수번째는 normal로, 짝수번째는 reverse로 진행*/
+        /* animation-direction: alternate; */
         animation-direction: alternate;
       }
+      /* from to  or 0% 25% 50% 75% 100%*/
 
       @keyframes myAnimation {
         0% {
@@ -48,6 +53,6 @@
     </style>
   </head>
   <body>
-    <div></div>
+    <div class="box"></div>
   </body>
 </html>

@@ -9,12 +9,15 @@
         width: 100px;
         height: 100px;
         background-color: red;
+        /* transition-property */
         animation-name: move;
+        /* transition-duration */
         animation-duration: 2s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 2;
       }
 
-      /* @keyframes move {
+      /* Helper Properties: top, left , right , bottom */
+      @keyframes move {
         from {
           left: 0;
         }
@@ -22,9 +25,9 @@
         to {
           left: 300px;
         }
-      } */
+      }
 
-      @keyframes move {
+      /* @keyframes move {
         0% {
           left: 0;
         }
@@ -45,7 +48,7 @@
           left: 300px;
           background-color: blue;
         }
-      }
+      } */
     </style>
   </head>
   <body>
