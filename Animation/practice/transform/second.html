@@ -7,7 +7,7 @@
     <style>
       .page {
         width: 500px;
-        margin: 50px auto;
+        margin: 20px auto;
       }
 
       .box {
@@ -16,19 +16,16 @@
         height: 200px;
       }
 
-      #img {
+      .box:hover {
         transition-duration: 2s;
-      }
-
-      #img:hover {
-        transform: rotate(45deg);
+        transform: scale(0.5);
       }
     </style>
   </head>
   <body>
     <h1>
-      가로, 세로 200px 크기고 :hover 하면 2초에 걸쳐 사진이 45도 회전하게
-      만드세요...
+      가로, 세로 200px 크기고 :hover 하면 2초에 걸쳐 사진이 현재 크기의 0.5
+      크기로 만드세요...
     </h1>
     <div class="page">
       <div class="box">

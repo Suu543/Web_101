@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .page {
+        width: 500px;
+        margin: 20px auto;
+      }
+
+      .box {
+        border: 2px solid #666;
+        background-color: #555;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+      }
+
+      .box img {
+        opacity: 0.7;
+      }
+
+      #img1 {
+        transform: skewX(15deg);
+      }
+
+      #img2 {
+        transform: skewY(15deg);
+      }
+
+      #img3 {
+        transition-duration: 2s;
+      }
+
+      #img3:hover {
+        transform: skewX(15deg) skewY(15deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <p>x 축으로 15도 회전한 모습</p>
+      <div class="box">
+        <img src="https://placeimg.com/100/100/tech" id="img1" alt="" />
+      </div>
+      <br />
+      <p>y 축으로 15도 회전한 모습</p>
+      <br />
+      <div class="box">
+        <img src="https://placeimg.com/100/100/tech" id="img2" alt="" />
+      </div>
+      <br />
+      <p>
+        x축과 y축을 같이 비틀면 3D 효과처럼 만들기. 시간은 2초 x, y 축으로 각
+        15도
+      </p>
+      <br />
+      <div class="box">
+        <img src="https://placeimg.com/100/100/tech" id="img3" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

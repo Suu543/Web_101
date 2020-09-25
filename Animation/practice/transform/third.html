@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .page {
+        width: 500px;
+        margin: 20px auto;
+      }
+      .box {
+        border: 2px solid red;
+        width: 200px;
+        height: 200px;
+      }
+      #img {
+        -webkit-transition-duration: 2s;
+        -moz-transition-duration: 2s;
+        -ms-transition-duration: 2s;
+        -o-transition-duration: 2s;
+        transition-duration: 2s;
+      }
+      #img:hover {
+        -webkit-transform: translateX(100px) translate(100px);
+        -moz-transform: translateX(100px) translate(100px);
+        -ms-transform: translateX(100px) translate(100px);
+        -o-transform: translateX(100px) translate(100px);
+        transform: translateX(100px) translate(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      가로, 세로 200px 크기고 :hover 하면 2초에 걸쳐 사진이 현재 위치에서 x
+      축으로 100px 만큼 이동하게 만드세요...
+    </h1>
+    <div class="page">
+      <div class="box">
+        <img src="https://placeimg.com/200/200/tech" id="img" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
