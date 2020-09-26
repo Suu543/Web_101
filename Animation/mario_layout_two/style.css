@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background-color: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background-color: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solod grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+.mario {
+  position: absolute;
+  top: -45px;
+  left: 0px;
+}
