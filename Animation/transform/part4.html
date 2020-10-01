@@ -23,6 +23,12 @@
       .skew {
         transform: skew(45deg);
       }
+
+      .hoverSkew:hover {
+        transform: skew(30deg);
+        transition-duration: 3s;
+        transition-property: transform;
+      }
     </style>
   </head>
   <body>
@@ -32,5 +38,6 @@
     <div class="box skewX">skewX - 45deg</div>
     <div class="box skewY">skewY - 45deg</div>
     <div class="box skew">skew</div>
+    <div class="box hoverSkew">Hover Skew</div>
   </body>
 </html>

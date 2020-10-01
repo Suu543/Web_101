@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+  <title>Mario Kart Animations</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-size: 62.5%;
+    }
+
+    .sky,
+    .grass,
+    .road {
+      position: relative;
+    }
+
+    .sky {
+      height: 40%;
+      background-color: skyblue;
+    }
+
+    .grass {
+      height: 30%;
+      background-color: seagreen;
+    }
+
+    .road {
+      height: 30%;
+      background-color: dimgrey;
+      border-top: 1.5rem solid grey;
+      border-bottom: 1.5rem solid grey;
+    }
+
+    .lines {
+      position: absolute;
+      top: 45%;
+      border: 5px dashed #fff;
+      width: 100%;
+      height: 5%;
+    }
+
+    .mario {
+      position: absolute;
+      top: -40px;
+      left: 0px;
+      z-index: 2;
+      /* animation-name: drive, jump;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards; */
+      animation: drive 5s linear infinite, jump 0.5s ease;
+    }
+
+    .luigi {
+      z-index: 2;
+      position: absolute;
+      top: 80px;
+      animation-name: drive;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes drive {
+      from {
+        transform: translate(-200px);
+      }
+
+      to {
+        transform: translate(2000px);
+      }
+    }
+
+    @keyframes jump {
+      0% {
+        top: -40px;
+      }
+
+      50% {
+        top: -100px;
+      }
+
+      100% {
+        top: -40px;
+      }
+    }
+
+    .cloud {
+      position: absolute;
+    }
+
+    .cloud {
+      position: absolute;
+    }
+
+    .cloud:nth-child(1) {
+      top: 120px;
+      width: 200px;
+      opacity: 0.6;
+      animation: wind 80s linear infinite reverse;
+    }
+
+    .cloud:nth-child(2) {
+      width: 300px;
+      top: 0;
+      animation: wind 60s linear infinite reverse;
+    }
+
+    @keyframes wind {
+      from {
+        left: -300px;
+      }
+
+      to {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <img
+      src="https://ose.s3.ap-northeast-2.amazonaws.com/static/cloud.png "
+      alt="cloud"
+      class="cloud"
+    />
+    <img
+      src="https://ose.s3.ap-northeast-2.amazonaws.com/static/cloud.png "
+      alt="cloud"
+      class="cloud"
+    />
+  </div>
+  <div class="grass"></div>
+  <div class="road">
+    <img
+      class="mario"
+      src="https://ose.s3.ap-northeast-2.amazonaws.com/static/mario.png"
+      alt="mario"
+    />
+    <div class="lines"></div>
+    <img
+      class="luigi"
+      src="https://ose.s3.ap-northeast-2.amazonaws.com/static/luigi.png"
+      alt="luigi"
+    />
+  </div>
+</body>
