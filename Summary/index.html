@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-size: 62.5%;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 4rem;
+        }
+
+        th, td {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 3rem;
+        }
+
+        a {
+            font-size: 2.5rem;
+        }
+
+        span {
+            font-size: 2.5rem;
+        }
+
+        b {
+            font-size: 2.5rem;
+        }
+
+        ul, ol, lo {
+            font-size: 3rem;
+        }
+
+
+        .part {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part-two {
+            height: 100vh;
+            margin-top: 5vh;
+        }
+
+        .part-two h1 {
+            background-color: red;
+        }
+        
+        .part-two span {
+            background-color: yellow;
+        }
+
+        .part-two b {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+
+        .descendant  a {
+            color: brown;
+            font-size: 5rem;
+        }
+
+        .child > a {
+            color: purple;
+            font-size: 5rem;
+        }
+
+        p[id="fist"] {
+            color: orange;
+            font-size: 4rem;
+        }
+
+        #hello {
+            background-color: orangered;
+        }  
+
+        .world {
+            background-color: orchid;
+        }
+
+        .test:hover {
+            color: blue;
+        }
+
+        .nth-child p:nth-child(1) {
+            color: red;
+        }
+
+        .nth-child p:nth-child(2) {
+            color: orange
+        }
+
+        .nth-child p:nth-child(3) {
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="part-one" id="part-one">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Paragraph</p>
+    
+        <form>
+            <input type="text" name="name" id="name" />
+            <input type="password" name="password" id="password" />
+            <input type="submit" name="submit" id="submit" />
+            <input type="radio" name="radio" id="radio" />
+            <input type="email" nmame="email" id="email" />
+        </form>
+    
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Gender</th>
+            </tr>
+            <tr>
+                <td>Yongsu</td>
+                <td>Jeong</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Yongsu</td>
+                <td>Jeong</td>
+                <td>Male</td>
+            </tr>
+        </table>    
+
+        <button>Butotn</button>
+
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+
+        <ol>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+
+        <img src="data:image/png;base64,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" alt="Image Not FOUND" />
+        <a href="www.google.com">Visit Google  </a>
+
+        <select>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+
+        <textarea id="content" name="content ">
+
+        </textarea>
+    </div>
+    <hr />
+    <div class="part-two" id="part-two">
+        <h1>display: block</h1>
+        <span>display: inline</span>
+        <b>display: inline block</b>
+
+        <h1>Selector - Descendant Selector</h1>
+        <p>p a {} 는 p 태그 내부에 있는 모든 자식, 손자 a 태그에 스타일 적용</p>
+        <p class="descendant">
+            <a>자식</a>
+            <span><a>손자</a></span>
+        </p>
+
+        <br />
+        <h1>Child Selector</h1>
+        <p>p > a {} 는 p 태그 내부에 있는 모든 자식만</p>
+        <p class="child">
+            <a>자식</a>
+            <span><a>손자</a></span>
+        </p>
+        
+        <br />
+        <h1>Attribute Selector</h1>
+        <p>tag[id] or tag[id=".."] or tag[??=".."]</p>
+        <p id="fist">Orange</p>
+
+        <br />
+        <h1>Select by ID OR CLASS</h1>
+        <p id="hello">Hello World</p>
+        <p class="world">Hello World</p>
+
+        <br />
+        <h1>Pseudo Selectors</h1>
+        <h1 class="test">Pseudo</h1>
+
+        <br />
+        <div class="nth-child">
+            <p>A</p>
+            <P>B</P>
+            <p>C</p>
+            <P>D</P>
+        </div>
+
+        <br />
+        <h2>Specificity</h2>
+        <p>
+            Inline > IDs > Classes, Pseudo-classes, and attributes > Elements and Pseudo-elements
+        </p>
+
+        <h2>Padding vs Margin</h2>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>content-box vs border-box</h2>
+        <ul>
+            <li>content-box</li>
+            <li>border-box</li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>visibility: hidden vs opacity: 0 vs block: none</h2>
+        <ul>
+            <li>visibility: hidden</li>
+            <li>opacity: 0</li>
+            <li>block: none</li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>font-size</h2>
+        <ul>
+            <li>px</li>
+            <li>em</li>
+            <li>rem</li>
+            <li>vh/vw</li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>position:</h2>
+        <ul>
+            <li>static - 기본값</li>
+            <li>relative - static일때 위치 기준</li>
+            <li>absolute - 부모가 relative, fixed, absolute, sticky인 경우 부모 기준 아니면 html or body 기준</li>
+            <li>fixed - 상단 네비게이션 바에서 특정 위치에 고정시킴</li>
+            <li>sticky - 나중에 배울꺼</li>
+            <li>Helper Properties: top, right, bottom, left</li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1>Media Queries</h1>
+        <h2>Responsive Web</h2>
+        <ul>
+            <li>@media all and (max-width: 000px)</li>
+            <li>@media all and (min-width: 000px)</li>
+            <li>@media all and (max-width: 000px) and (min-width: 000px)</li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>Flexbox</h2>
+        <ul>
+            <li>display: flex</li>
+            <li>flex-direction: row (기본값) or column정렬 기준</li>
+            <li>justify-content 주 축 정렬</li>
+            <li>align-items: 교차 축 정렬</li>
+            <li>flex-wrap: wrap or nowrap : overflow 발생시 줄 바꿈 여부</li>
+            <li>flex-grow: 0 - 증가 너비 비율</li>
+            <li>flex-shrink: 1 - 감소 너비 비율</li>
+            <li>flex-basis: auto - 기본 너비</li>
+            <li>flex: flex-grow flex-shrink basis-width</li>
+            <li>flex: 1 1 200px - 증가너비(1) 감소너비(1) 기본너비(200px)</li>
+            <li>flex 사용 용례</li>
+            <li>|111|222222|</li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>Animation - Transition</h2>
+        <ul>
+            <li>프로퍼티 값 변경을 기준 - 자동으로 적용되지 않고 특정 프로퍼티 값이 변경되는 이벤트가 발생시 적용됨</li>
+            <li>transition-property: all(기본값) 어떤 프로퍼티에 반응 할 것인가</li>
+            <li>transition-duration: 0s(끼본값) 지속시간</li>
+            <li>transition-timing-function: ease(기본값) 어떤 비율로 변화를 적용할 것인가 </li>
+            <li>transition-delay: 0s(기본값) 얼마의 지연후 적용할 것인가</li>
+            <li>transition: property duration function delay - 축약형</li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>Animation - Animation</h2>
+        <ul>
+            <li>프로퍼티 값 변경 여부에 상관없이 바로 적용되는 이벤트 더 부드러운 느낌을 느낄 수 있다.</li>
+            <li>@keyframes 애니메이션이름 {} - from to or 0% ~ 100%</li>
+            <li>animation-name: 정의한 keyframes 이름</li>
+            <li>animation-duration: 정의한 애니메이션 지속 시간 - 처음 ~ 끝</li>
+            <li>animation-delay: 애니메이션 적용 지연 시간</li>
+            <li>animation-iteration-count: infinite: 정의한 애니메이션 반복 횟수</li>
+            <li>animation-direction: 애니메이션 진행 방향 from --> to or to --> from</li> 
+            <li>animation-fill-mode: 애니메이션 실행 전 실행 후 상태 결정</li>
+            <li>animation-play-state: 애니메이션을 특정 이벤트에의해 도중에 멈추는데 이용</li>
+            <li>animation: name duration function delay iteration direction fill-mode play-state - 축약형</li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <h2>Animation - Transform</h2>
+        <ul>
+            <li>transition은 특정 이벤트에 반응해 적용</li>
+            <li>animation은 자동으로 적용</li>
+            <li>transform은 transition에 가깝지만 이동, 회전, 확대축소, 비틀기 등의 기능을 지원 - 단, 다른 요소의 layout에 어떠한 영향도 미치지 않음</li>
+            <li>transform: translate(x, y) - 요소의 위치를 x축으로 x 만큼, y축으로 y 만큼</li>
+            <li>transform: scale(x, y) - 요소의 크기를 x축으로 x 만큼, y축으로 y 만큼</li>
+            <li>transform: skew(30deg) - 요소를 30도 만큼 비틀기, x & y 축으로</li>
+            <li>transform: rotate(180deg) - 요소를 180도 회전하기</li>
+        </ul>
+    </div>
+</body>
+</html>
