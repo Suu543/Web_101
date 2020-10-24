@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelly</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap"
+    rel="stylesheet"
+  />
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+
+        html {
+        font-size: 62.5%;
+        }
+
+        body {
+        font-family: "Poppins", sans-serif;
+        }
+
+        h1 {
+        font-size: 2.6rem;
+        }
+
+        li,
+        button,
+        label,
+        input,
+        p {
+        font-size: 2rem;
+        }
+
+        h2 {
+        font-size: 4.8rem;
+        }
+
+        h3 {
+        font-size: 3rem;
+        font-weight: normal;
+        }
+
+        h4,
+        h5 {
+        font-size: 2.8rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-head {
+            top: 0;
+            z-index: 3;
+            color: white;
+            background-color: #131c27;
+            position: sticky;
+        }
+
+        .navbar {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 2rem;
+            min-height: 10vh;
+        }
+
+        #logo {
+            /* https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox%EC%9D%98_%EA%B8%B0%EB%B3%B8_%EA%B0%9C%EB%85%90 */
+            flex: 2 1 4rem;
+            /* auto 대신에 4rem 넣은 이유는 flex-wrap을 목적으로
+                4rem + li 요소들의 길이가 합쳐져서 두 배가 아닌 것 처럼 보인다.
+            */
+            font-weight: 400;
+            font-family: "Pattaya", sans-serif;
+        }
+
+        .navbar ul {
+            /* flex: 1 1 auto; */
+            flex: 1 1 4rem;
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.8), transparent),
+            url("../Travelly/img/landing-page.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-content h3 {
+            padding: 5rem;
+        }
+
+        .main-content button {
+            padding: 2rem 6rem;
+            background: #4c6e97;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .main-content button:hover {
+            background: #27394e;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-head">
+        <div class="navbar">
+            <h1 id="logo">Travelly</h1>
+            <ul>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-content">
+            <h2>Travel Beyond Limits</h2>
+            <h3>
+                Start your travel at an affordable price with Travelly <br />Contact
+                us now bellow.
+            </h3>
+            <button>Book Now</button>
+        </div>
+    </div>
+</body>
+</html>

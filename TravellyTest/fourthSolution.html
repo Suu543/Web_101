@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./skeleton.css">
+    <style>
+        .contact {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../Travelly/img/contact-mountain.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .form-wrapper {
+            background: rgba(19, 20, 39, 0.8);
+            width: 60%;
+            color: white;
+            border-radius: 2rem;
+        }
+
+        .form-head {
+            text-align: center;
+            padding: 4rem;
+        }
+
+        .name-form, .email-form {
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .form-wrapper label {
+            margin: 0rem 2rem;
+        }
+
+
+        .form-wrapper button {
+            width: 100%;
+            padding: 2rem;
+            margin-top: 8rem;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .form-wrapper input {
+            padding: 1rem 3rem;
+        }   
+
+        .footer {
+            color: white;
+            background-color: rgba(19, 28, 39, 1);
+        }
+
+        .footer-wrapper {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            min-height: 10vh;
+            flex-wrap: wrap;
+        }
+
+        .footer-wrapper h5 {
+            flex: 1 1 40rem;
+        }
+
+        .footer-wrapper ul {
+            display: flex;
+            list-style: none;
+            flex: 1 1 40rem;
+            justify-content: space-around;
+        }
+
+
+        button:focus {
+            background: #2c3f57;
+            outline-style: solid;
+            outline-color: cornflowerblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <div class="form-wrapper">
+            <div class="form-head">
+                <h2>Contact Us</h2>
+            </div>
+            <form>
+                <div class="name-form">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name" required />
+                </div>
+                <div class="email-form">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" required />
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-wrapper">
+            <h5>Travelly &copy;</h5>
+            <ul>
+                <li>
+                    <a>
+                        <img src="../Travelly/icons/twitter.svg"/>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="../Travelly/icons/youtube.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="../Travelly/icons/instagram.svg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
