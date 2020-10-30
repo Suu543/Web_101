@@ -1,104 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Before Travelly</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Travelly is a travel agency website that helps you pick out your holiday vacation"
+    />
+    <meta name="robots" content="index,follow" />
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./skeleton.css">
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+      .main-head {
+        color: white;
+        background-color: #131c27;
+        position: sticky;
+        z-index: 9999;
+        top: 0;
       }
 
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
+      #logo {
+        flex: 2 1 auto;
+        font-family: 'Pattaya', sans-serif;
+        font-weight: 400;
       }
 
-      html {
-        font-size: 62.5;
-      }
-
-      body {
-        max-width: 960px;
-      }
-
-      /* Header Section */
-      header {
-        background-color: orange;
+      .navbar {
+        height: 10vh;
+        width: 90%;
+        margin: auto;
         display: flex;
         align-items: center;
-        padding: 1.3rem;
-      }
-
-      .head {
-        font-weight: 900;
-        font-size: 1rem;
-        flex: 2 1 20rem;
-      }
-
-      nav {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      nav p {
-        margin-right: 2rem;
-        font-size: 1rem;
-      }
-
-      /* Main Section */
-      main {
-        display: flex;
         flex-wrap: wrap;
-        font-weight: 900;
-        background-color: gold;
-        justify-content: space-around;
-        width: 100%;
-      }
-
-      main section {
-        flex-basis: 30%;
-      }
-
-      section {
-        background: lemonchiffon;
         padding: 2rem;
-        text-align: center;
-        flex-grow: 1;
-        font-size: 1rem;
-        margin: 1rem;
       }
 
-      @media all and (max-width: 500px) {
-        main section {
-          flex-basis: 100%;
-        }
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        flex: 1 1 auto;
+        justify-content: space-around;
+      }
+
+      .hero {
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        align-items: center;
+        background:
+        linear-gradient(rgba(0,0,0,0.8), transparent),
+        url("https://github.com/jos50275266/Web_101/blob/master/TravellyStarter/img/landing-page.jpg?raw=true");
+          /* 배경화면 사진을 한 장만 */
+        background-repeat: no-repeat;
+        /* 가로 세로 길이 만큼을 한 장의 배경화면 사진을 늘려서 다 차지하게 만들겠다 */
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero h3 {
+        padding: 5rem;
+      }
+
+      .hero button {
+        padding: 2rem 6rem;
+        border: none;
+        font-size: 1.8rem;
+        background: #4c6e97;
+        color: white;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .hero button:hover {
+        background: #131c27;
       }
     </style>
+    <title>Travelly | Travelling Agency</title>
   </head>
-
   <body>
-    <header>
-      <div class="head"><p>My Company</p></div>
-      <nav>
-        <p><a href="#">Login</a></p>
-        <p><a href="#">SignUp</a></p>
+    <header class="main-head">
+      <nav class="navbar">
+        <h1 id="logo">Travelly</h1>
+        <ul>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section class="first">
-        <p>About Us</p>
-      </section>
-      <section class="second">
-        <p>Examples</p>
-      </section>
-      <section class="third">
-        <p>Contact Us</p>
+      <section class="hero">
+        <h2>Travel Beyond Limits</h2>
+        <h3>
+          Start your travel at an affordable price with Travelly <br />Contact
+          us now bellow.
+        </h3>
+        <button>Book Now</button>
       </section>
     </main>
   </body>

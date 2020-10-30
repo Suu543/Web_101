@@ -95,6 +95,7 @@ nav ul {
   font-weight: 400;
 }
 
+
 .hero {
   min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
@@ -128,6 +129,12 @@ nav ul {
   overflow: hidden;
 }
 
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
 .locations-head {
   width: 90%;
   margin: auto;
@@ -148,12 +155,6 @@ nav ul {
 }
 
 /* Cloud */
-.cloud {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-}
-
 .moving-cloud-1 {
   animation: cloudAnimation 3s infinite alternate ease-in-out;
 }
