@@ -5,36 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .first {
-            background: red;
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            top: 100px;
-            /* position: absolute; */
-            /* relative, absolute, fixed, sticky */
-            /* position: relative; */
-            /* helper properties 
-            top, right, bottom, left
-            */
-            /* top: 0; */
-        }
-
-        .second {
-            background: purple;
+        .container {
             width: 100vw;
             height: 100vh;
-            padding: 0;
-            margin-top: 500px;
-            position: relative;
+            background: linear-gradient(rgba(251, 218, 222, 1), transparent),
+             url(https://www.coca-colacompany.com/content/dam/journey/us/en/brands/coca-cola/cocacola_logo.png);
+            background-repeat: no-repeat;
+            /* background-size: contain; */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-
     </style>
 </head>
-    <body>
-        <div class="second">
-            <div class="first"></div>
-        </div>
-    </body>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+    </div>
+</body>
 </html>

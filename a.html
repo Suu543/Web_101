@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.hero-image {
-  background-image: url("https://www.w3schools.com/w3images/photographer.jpg");
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background:
+      linear-gradient(#c9afa2, transparent),
+      url(https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/1W8M/image/yWymBHvM6SmcQfHkgAntOwoFP2A);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-
-<div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:50px">I am Jane Doe</h1>
-    <h3>And I'm a Photographer</h3>
-    <button>Hire me</button>
+  <div class="container">
+    <h1>Hello World</h1>
   </div>
-</div>
-
-<p>Page content..</p>
-<p>Note that this technique will also make the image responsive: Resize the browser window to see the effect.</p>
-
 </body>
 </html>

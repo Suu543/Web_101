@@ -47,8 +47,7 @@ button {
     font-family: "Pattaya", sans-serif;
     font-weight: 400;
   }
-  
-  
+    
   .hero {
     min-height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
@@ -105,7 +104,6 @@ button {
     background-clip: text;
     color: white;
     /* 드레이그해야 보이게 */
-    -webkit-text-fill-color: transparent;
   }
   
   /* Cloud */

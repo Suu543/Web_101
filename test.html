@@ -1,104 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Travelly is a travel agency website that helps you pick out your holiday vacation"
-    />
-    <meta name="robots" content="index,follow" />
-    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./skeleton.css">
-    <style>
-      .main-head {
-        color: white;
-        background-color: #131c27;
-        position: sticky;
-        z-index: 9999;
-        top: 0;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .main-head {
+      background-color: #131c27;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      margin: auto;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 10vh;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      flex: 1 1 40rem;
+      justify-content: space-around;
+    }
+
+    #logo {
+      flex: 2 1 40rem;
+      font-weight: 400;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0, 0.8), transparent), url(https://github.com/jos50275266/Web_101/blob/master/TravellyStarter/img/landing-page.jpg?raw=true);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: white;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h3 {
+      padding: 5rem;
+    }
+
+    .hero button {
+      padding: 3rem 5rem;
+      background-color: #2D4058;
+      color: white;
+      border: none;
+      border-radius: 20px;
+    }
+
+    #locations {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+      url(https://cdn-images-1.medium.com/max/800/1*-ml_Mi6wuVi8f3rrk1J22g.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+    }
+
+    .locations-head {
+      width: 90%;
+      margin: auto;
+    }
+
+    .locations-head h2 {
+      padding: 1rem 0rem;
+      text-decoration: underline;
+    }
+
+    .locations-head h3 {
+      padding: 4rem 1rem;
+      background: linear-gradient(#131c27, #663b34);
+      color: white;
+    }
+
+    .moving-cloud-1 {
+      animation: cloudAnimation 3s infinite alternate ease-in-out;
+    }
+
+    .moving-cloud-2 {
+      top: 20%;
+      z-index: -1;
+      opacity: 0.5;
+      animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+    }
+    
+    @keyframes cloudAnimation {
+      from {
+        transform: translate(10%, -10%);
       }
 
-      #logo {
-        flex: 2 1 auto;
-        font-family: 'Pattaya', sans-serif;
-        font-weight: 400;
+      to {
+        transform: translate(0%, 0%);
       }
+    }
 
-      .navbar {
-        height: 10vh;
-        width: 90%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 2rem;
-      }
+    .benefits-head {
+      min-height: 30vh;
+      background: #343c44;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+    }
 
-      .navbar ul {
-        display: flex;
-        list-style: none;
-        flex: 1 1 auto;
-        justify-content: space-around;
-      }
+    .benefits-head h3 {
+      padding: 1rem;
+    }
 
-      .hero {
-        min-height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-        align-items: center;
-        background:
-        linear-gradient(rgba(0,0,0,0.8), transparent),
-        url("https://github.com/jos50275266/Web_101/blob/master/TravellyStarter/img/landing-page.jpg?raw=true");
-          /* 배경화면 사진을 한 장만 */
-        background-repeat: no-repeat;
-        /* 가로 세로 길이 만큼을 한 장의 배경화면 사진을 늘려서 다 차지하게 만들겠다 */
-        background-size: cover;
-        background-position: center;
-      }
+    .cards {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      flex-wrap: wrap;
+    }
 
-      .hero h3 {
-        padding: 5rem;
-      }
+    .card {
+      flex: 1 1 25rem;
+      min-height: 40vh;
+      margin: 2rem 5rem;
+      text-align: center;
+      box-shadow: 0px 13px 10px 4px #000000;
+    }
 
-      .hero button {
-        padding: 2rem 6rem;
-        border: none;
-        font-size: 1.8rem;
-        background: #4c6e97;
-        color: white;
-        transition: all 0.5s ease-in-out;
-      }
+    .card:hover {
+      transition: all 1s;
+      transform: scale(1.2);
+    }
 
-      .hero button:hover {
-        background: #131c27;
-      }
-    </style>
-    <title>Travelly | Travelling Agency</title>
-  </head>
-  <body>
-    <header class="main-head">
-      <nav class="navbar">
-        <h1 id="logo">Travelly</h1>
-        <ul>
-          <li><a href="#locations">Locations</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    .card-icon {
+      background: #27394e;
+      text-align: center;
+    }
 
-    <main>
-      <section class="hero">
-        <h2>Travel Beyond Limits</h2>
+    .card-icon img {
+      max-width: 15%;
+      margin: 2rem;
+    }
+
+    .card h4,
+    .card p {
+      padding: 1rem;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <header class="main-head">
+    <nav>
+      <h1 id="logo">Travelly</h1>
+      <ul>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Travel Beyond Limits</h2>
+      <h3>
+        Start your travel at an affordable price with Travelly <br />Contact
+        us now bellow.
+      </h3>
+      <button>Book Now</button>
+    </section>
+
+    <section id="locations">
+      <header class="locations-head">
+        <h2>The Perfect Travelling Experience.</h2>
         <h3>
-          Start your travel at an affordable price with Travelly <br />Contact
-          us now bellow.
+          We cover everything from picking the perfect hotel, <br />
+          flight and travelling destination.
         </h3>
-        <button>Book Now</button>
-      </section>
-    </main>
-  </body>
+
+        <img src="https://cdn-images-1.medium.com/max/800/1*3ZryaWbg798lR4V4ND-UGA.png" class="moving-cloud-1 cloud" alt="" />
+        <img src="https://cdn-images-1.medium.com/max/800/1*3ZryaWbg798lR4V4ND-UGA.png" class="moving-cloud-2 cloud" alt="" />
+      </header>
+    </section>
+
+    <section id="benefits">
+      <header class="benefits-head">
+        <h2>The Perfect Travel</h2>
+        <h3>
+          We cover everything for picking the perfect hotel <br />
+          to flight and destination.
+        </h3>
+      </header>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://ose.s3.ap-northeast-2.amazonaws.com/web101/plane-departure-solid.svg" alt="" />
+          </div>
+          <h4>Travel</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed
+            deleniti modi ipsa blanditiis incidunt!
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://ose.s3.ap-northeast-2.amazonaws.com/web101/plane-departure-solid.svg" alt="" />
+          </div>
+          <h4>Hotel</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed
+            deleniti modi ipsa blanditiis incidunt!
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://ose.s3.ap-northeast-2.amazonaws.com/web101/plane-departure-solid.svg" alt="" />
+          </div>
+          <h4>Fly</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed
+            deleniti modi ipsa blanditiis incidunt!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="form-wrapper">
+        <header class="form-head">
+          <h2>Contact Us</h2>
+        </header>
+        <form action="https://formspree.io/mzbbyqbo" method="POST">
+          <div class="name-form">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" required minlength="4" />
+          </div>
+          <div class="email-form">
+            <label for="email">Email:</label>
+            <input id="email" type="email" required name="_replyto" />
+          </div>
+          <button value="Send" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-wrapper">
+      <h5>Travelly &copy;</h5>
+      <ul>
+        <li>
+          <a href="#" title="twitter-social-media"
+            ><img src="../icons/twitter.svg" alt="twitter-social-media"
+          /></a>
+        </li>
+        <li>
+          <a href="#" title="youtube-social-media"
+            ><img src="../icons/youtube.svg" alt="youtube-social-media"
+          /></a>
+        </li>
+        <li>
+          <a href="#" title="instagram-social-media"
+            ><img src="../icons/instagram.svg" alt="instagram-social-media"
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </footer>  
+</body>
 </html>
