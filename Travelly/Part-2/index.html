@@ -14,8 +14,317 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../skeleton.css">
-    <link rel="stylesheet" href="./style.css" />
     <title>Travelly | Travelling Agency</title>
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header Section */
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+  background: #27394e;
+}
+
+/* Nav Section With Hero */
+
+.main-head {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  /* opacity: 0.3; */
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 40rem;
+  list-style: none;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("../img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h3 {
+  padding: 5rem;
+}
+
+#locations {
+  min-height: 100vh;
+  background: url("../img/new-york-page.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Beneftis Section */
+.benefits-head {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #343c44;
+  color: white;
+  padding: 3rem;
+}
+
+.cards {
+  min-height: 70vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  -webkit-box-shadow: 4px 5px 15px 5px #9B9B9B; 
+  box-shadow: 4px 5px 15px 5px #9B9B9B;
+  text-align: center;
+}
+
+.card:hover {
+  transition: transform 1s;
+  transform: scale(1.2);
+}
+
+.card-icon {
+  background: #27394e;
+}
+
+.card-icon img {
+  max-width: 15%;
+  margin: 2rem;
+}
+
+/* Contact Section */
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("https://cdn-images-1.medium.com/max/800/1*WKlb25xf74s2ypP_pm77yg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  color: white;
+  background-color: rgba(48,55,64, 0.8);
+  width: 60%;
+  margin: auto;
+  border-radius: 2rem;
+}
+
+.form-head {
+  padding: 4rem;
+  text-align: center;
+}
+
+.name-form,
+.email-form {
+  padding: 3.5rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  padding: 3rem;
+}
+
+.form-wrapper input {
+  padding: 1.5rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 5rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+/* Footer Section */
+  footer {
+    background: #131D27;
+    color: white;
+  }
+
+  .footer-wrapper {
+    min-height: 10vh;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+
+  .footer-wrapper h5 {
+    flex: 1 1 40rem;
+  }
+
+  .footer-wrapper ul {
+    flex: 1 1 40rem;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+
+  .footer-wrapper img {
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  @media all and (max-width: 932px) {
+    html {
+      font-size: 45%;
+    }    
+
+    .form-wrapper {
+      width: 90%;
+    }
+    
+    .cloud {
+      height: 40rem;
+    }
+
+    .moving-cloud-1 {
+      z-index: -1;
+    }
+
+    .moving-cloud-2 {
+        top: 10%;
+        z-index: -2;
+    }
+  }
+  </style>
   </head>
   <body>
     <header class="main-head">
@@ -94,6 +403,49 @@
           </div>
         </div>
       </section>
+
+      <section id="contact">
+        <div class="form-wrapper">
+          <header class="form-head">
+            <h2>Contact Us</h2>
+          </header>
+          <form action="https://formspree.io/f/xnqgnypj" method="POST">
+            <div class="name-form">
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" required minlength="4" />
+            </div>
+            <div class="email-form">
+              <label for="email">Email:</label>
+              <input id="email" type="email" required name="_replyto" />
+            </div>
+            <button value="Send" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>  
     </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <h5>Travelly &copy;</h5>
+        <ul>
+          <li>
+            <a href="#" title="twitter-social-media"
+              ><img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-twitter-1.png" alt="twitter-social-media"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="youtube-social-media"
+              ><img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-twitter-1.png" alt="youtube-social-media"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="instagram-social-media"
+              ><img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-twitter-1.png" alt="instagram-social-media"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
   </body>
 </html>

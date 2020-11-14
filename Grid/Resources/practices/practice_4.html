@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .grid-container {
+            display: grid;
+            background: red;
+            grid-template-columns: 200px 400px;
+            grid-template-rows: 300px 300px;
+        }
+
+        .item {
+            color: white;
+            display: flex;
+            width: 100%;
+        }
+
+        .item-1 {
+            background-color: blue;
+            align-items: flex-start;
+        }
+
+        .item-2 {
+            background-color: orange;
+            align-items: center;
+        }
+
+        .item-3 {
+            background-color: palegreen;
+            align-items: flex-end;
+        }
+
+        .item-4 {
+            background-color: pink;
+            align-items: center;
+        }
+    </style>
+    <title>CSS Grid Layout Introduction</title>
+  </head>
+  <body>
+    <section class="grid-container">
+      <div class="item item-1">
+          <h1>Hello World</h1>
+      </div>
+      <div class="item item-2">
+        <h1>Hello World</h1>
+      </div>
+      <div class="item item-3">
+        <h1>Hello World</h1>
+      </div>
+      <div class="item item-4">
+        <h1>Hello World</h1>
+      </div>
+    </section>
+  </body>
+</html>

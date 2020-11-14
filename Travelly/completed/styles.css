@@ -248,6 +248,12 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer-wrapper img {
+  max-width: 32px;
+  max-height: 32px;
+  background: #131D27
+}
+
 footer ul {
     display: flex;
     flex: 1 1 40rem;

@@ -6,22 +6,53 @@
     <title>Document</title>
     <style>
         .container {
-            width: 100vw;
             height: 100vh;
-            background: linear-gradient(rgba(251, 218, 222, 1), transparent),
-             url(https://www.coca-colacompany.com/content/dam/journey/us/en/brands/coca-cola/cocacola_logo.png);
-            background-repeat: no-repeat;
-            /* background-size: contain; */
-            background-size: cover;
+            width: 100%;
+        }
+
+        .cards {
             display: flex;
+            width: 80%;
+            margin: auto;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+        }
+
+        .card {
+            min-width: 30%;
+            max-width: 30%;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hello World</h1>
+        <div class="cards">
+            <div class="card">
+                <img src="https://dummyimage.com/350" alt="">
+                <h1>Hello World</h1>
+            </div>
+            <div class="card">
+                <img src="https://dummyimage.com/350" alt="">
+                <h1>Hello World</h1>
+            </div>
+            <div class="card">
+                <img src="https://dummyimage.com/350" alt="">
+                <h1>Hello World</h1>
+            </div>
+            <div class="card">
+                <img src="https://dummyimage.com/350" alt="">
+                <h1>Hello World</h1>
+            </div>
+            <div class="card">
+                <img src="https://dummyimage.com/350" alt="">
+                <h1>Hello World</h1>
+            </div>
+            <div class="card">
+                <img src="https://dummyimage.com/350" alt="">
+                <h1>Hello World</h1>
+            </div>
+        </div>
     </div>
 </body>
 </html>

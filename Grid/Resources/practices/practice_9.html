@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: repeat(7, 100px);
+            grid-template-areas: 
+                "header header header header"
+                "hero hero main main"
+                "hero hero main main"
+                "sidebar sidebar main main"
+                "sidebar sidebar extra extra"
+                "related related related relatedPost"
+                "footer footer footer footer"
+            ;
+        }
+
+        header {
+            background-color: cornflowerblue;
+            grid-area: header;
+        }
+
+        main {
+            background-color: crimson;
+            grid-area: main;
+        }
+
+        .hero {
+            background-color: plum;
+            grid-area: hero;
+        }
+
+        .sidebar {
+            background-color: greenyellow;
+            grid-area: sidebar;
+        }
+
+        .extra {
+            background-color: gray;
+            grid-area: extra;
+        }
+        
+        .related {
+            background-color: lightblue;
+            grid-area: related;
+        }
+
+        .relatedPost {
+            background-color: lightcoral;
+            grid-area: relatedPost;
+        }
+
+        footer {
+            background-color: magenta;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header></header>
+        <article class="hero"></article>
+        <article class="sidebar"></article>
+        <main></main>
+        <article class="extra"></article>
+        <article class="related"></article>
+        <article class="relatedPost"></article>
+        <footer></footer>
+    </div>
+</body>
+</html>

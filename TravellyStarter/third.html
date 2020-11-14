@@ -13,7 +13,66 @@
       href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../skeleton.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+      .main-head {
+        background-color: #131c27;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+      }
+
+      nav {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 10vh;
+      }
+
+      #logo {
+        flex: 2 1 40rem;
+        font-weight: 400;
+      }
+
+      nav ul {
+        flex: 1 1 40rem;
+        justify-content: space-around;
+        display: flex;
+        list-style: none;
+      }
+
+      .hero {
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: 
+        linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+        url("./img/landing-page.jpg");
+        color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero h3 {
+        padding: 5rem;
+      }
+
+      .hero button {
+        padding: 3rem 5rem;
+        color: white;
+        background-color: black;
+        border: none;
+      }
+
+    </style>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <title>Travelly | Travelling Agency</title>
   </head>
   <body>
@@ -46,8 +105,8 @@
             flight and travelling destination.
           </h3>
 
-          <img src="../img/cloud.png" class="moving-cloud-1 cloud" alt="" />
-          <img src="../img/cloud.png" class="moving-cloud-2 cloud" alt="" />
+          <img src="https://cdn-images-1.medium.com/max/800/1*3ZryaWbg798lR4V4ND-UGA.png" class="moving-cloud-1 cloud" alt="" />
+          <img src="https://cdn-images-1.medium.com/max/800/1*3ZryaWbg798lR4V4ND-UGA.png" class="moving-cloud-2 cloud" alt="" />
         </header>
       </section>
 

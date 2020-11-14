@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .grid-container {
+            display: grid;
+            background: red;
+            /* 한 박스의 가로길이라 생각할 수 있다 */
+            /* grid-template-columns: 한 줄의 첫번째 요소 한 줄의 두번째 요소 */
+            grid-template-columns: 300px 300px;
+            /* 한 박스의 세로길이라 생각할 수 있다 */
+            /* grid-template-rows: 첫번째 줄, 두번째 줄 */
+            grid-template-rows: 200px 200px;
+        }
+
+        .item {
+            background-color: white;
+        }
+    </style>
+    <title>CSS Grid Layout Introduction</title>
+  </head>
+  <body>
+    <!-- Emmet SC => section.grid-container>.item.item-$*10{item-$} -->
+    <section class="grid-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </section>
+  </body>
+</html>
